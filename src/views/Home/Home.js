@@ -9,7 +9,7 @@ function Home() {
   const [plants,setPlants]=useState([])
 
   const loadPlants = async ()=>{
-    const response= await axios.get('http://localhost:5000/plants')
+    const response= await axios.get(`${process.env.REACT_APP_API_URL}/plants`)
     setPlants(response.data.data)
   }
 
